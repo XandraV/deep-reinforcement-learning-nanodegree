@@ -1,4 +1,4 @@
-# Deep Reinforcement Learning Nanodegree - Project 3: Collaboration and Competition
+# Project 3: Collaboration and Competition
 ### Summary
 For this project, two agents were trained to bounce a ball over a net for as many time steps as possible.
 
