@@ -22,11 +22,17 @@ The agent solved the environment in 164 episodes and the received rewards after 
 ![reward](rewards.png)
 
 ### Parameters used to achieve this result:
+
 BUFFER_SIZE = int(1e5) BATCH_SIZE = 128
+
 GAMMA = 0.99
+
 TAU = 1e-3
+
 LR_ACTOR = 1.5e-4
+
 LR_CRITIC = 1.5e-4
+
 WEIGHT_DECAY = 0.0001
 
 The model weights of the successful agent can be found in checkpoint_actor.pth and checkpoint_critic.pth saved.
