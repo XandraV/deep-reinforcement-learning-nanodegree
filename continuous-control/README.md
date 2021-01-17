@@ -28,8 +28,10 @@ The task is episodic, and in order to solve the environment,  your agent must ge
 
 To set up your python environment to run the code in this repository, follow the instructions below.
 
-1. Create (and activate) a new environment with Python 3.6.
-
+1. Create (and activate) a new environment with Python 3.6.  
+```bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+```
 	- __Linux__ or __Mac__: 
 	```bash
 	conda create --name drlnd python=3.6
@@ -42,26 +44,23 @@ To set up your python environment to run the code in this repository, follow the
 	```
 	
     
-2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.  
+2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.
 	- Next, install the **classic control** environment group by following the instructions [here](https://github.com/openai/gym#classic-control).
 	- Then, install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
+	```bash
+	pip install gym
+	```
 	
     
-3. Clone the udacity/deep-reinforcement-learning repository, and navigate to the `python/` folder.  Then, install several dependencies specified in requirements.txt.
+3. Install several dependencies
 ```bash
-git clone https://github.com/udacity/deep-reinforcement-learning.git
-cd deep-reinforcement-learning/python
-pip install .
+conda install Pillow matplotlib numpy jupyter pytest docopt pyyaml protobuf grpcio pandas scipy ipykernel
+conda install -y pytorch -c pytorch
+pip install tensorflow==2.2.0rc4
+pip install unityagents
 ```
 
-4. Create an [IPython kernel](http://ipython.readthedocs.io/en/stable/install/kernel_install.html) for the `drlnd` environment.  
-```bash
-python -m ipykernel install --user --name drlnd --display-name "drlnd"
-```
-
-5. Clone this repository and replace it with `p2_continuous-control/` folder.
-
-6. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
+4. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
 
     - **_One (1) Agent_**
         - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux.zip)
@@ -73,7 +72,7 @@ python -m ipykernel install --user --name drlnd --display-name "drlnd"
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/one_agent/Reacher_Linux_NoVis.zip) (version 1) or [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P2/Reacher/Reacher_Linux_NoVis.zip) (version 2) to obtain the "headless" version of the environment.  You will **not** be able to watch the agent without enabling a virtual screen, but you will be able to train the agent.  (_To watch the agent, you should follow the instructions to [enable a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md), and then download the environment for the **Linux** operating system above._)
 
-7. Place the file in `p2_continuous-control/`  and unzip (or decompress) the file. 
+5. Place the file in `continuous-control/`  and unzip (or decompress) the file. 
 
 ### Instructions
 
