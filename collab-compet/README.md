@@ -19,7 +19,7 @@ After resetting the environment the agent takes a state as an input and outputs 
 
 The agent solved the environment in 4744 episodes and the received rewards after each episode can be seen below.
 
-
+![rewards](rewards.png)
 
 
 ### Parameters used to achieve this result:
