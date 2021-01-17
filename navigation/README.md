@@ -1,64 +1,35 @@
-[//]: # (Image References)
+# Project 1: Navigation Report
+## Summary
+For this project, an agent was trained to navigate in a large square world and collect yellow bananas.
 
-[image1]: https://user-images.githubusercontent.com/10624937/42135619-d90f2f28-7d12-11e8-8823-82b970a54d7e.gif "Trained Agent"
+A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana. The goal was to get an average score of +13 over 100 consecutive episodes.
 
-# Project 1: Navigation
+The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around the agent's forward direction. Four discrete actions are available: move forward, move backward, turn left, turn right.
 
-### Introduction
+## Implementation
+### Agent and Q-Network
+The agent is initialised in dqn_agent.py with state and action size. The goal is to find the optimal action-value function that maximises the cumulative reward. In this case a Deep Q-Learning algorithm represents the action-value function instead of a Q-table. The agent uses two Q-Networks to solve the environment, a target and a local network(defined in model.py).
 
-For this project, you will train an agent to navigate (and collect bananas!) in a large, square world.  
+The neural network consists of three hidden layers and all three layers have a ReLU activation function. The network takes 37 states as inputs and outputs the action value function for every possible action in the corresponding state.
 
-![Trained Agent][image1]
+![rewards](rewards.png)
 
-A reward of +1 is provided for collecting a yellow banana, and a reward of -1 is provided for collecting a blue banana.  Thus, the goal of your agent is to collect as many yellow bananas as possible while avoiding blue bananas.  
+## Parameters used to achieve this result:
+eps_start : 1
 
-The state space has 37 dimensions and contains the agent's velocity, along with ray-based perception of objects around agent's forward direction.  Given this information, the agent has to learn how to best select actions.  Four discrete actions are available, corresponding to:
-- **`0`** - move forward.
-- **`1`** - move backward.
-- **`2`** - turn left.
-- **`3`** - turn right.
+eps_end: 0.1
 
-The task is episodic, and in order to solve the environment, your agent must get an average score of +13 over 100 consecutive episodes.
+eps_decay: 0.995
 
-### Getting Started
+BATCH_SIZE: 64
 
-1. Create (and activate) a new environment with Python 3.6.  
-```bash
-python -m ipykernel install --user --name drlnd --display-name "drlnd"
-conda create --name drlnd python=3.6 
-activate drlnd
-```
-	
-    
-2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.
-	- Next, install the **classic control** environment group by following the instructions [here](https://github.com/openai/gym#classic-control).
-	- Then, install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
-	```bash
-	pip install gym
-	```
-	
-    
-3. Install several dependencies
-```bash
-conda install Pillow matplotlib numpy jupyter pytest docopt pyyaml protobuf grpcio pandas scipy ipykernel
-conda install -y pytorch -c pytorch
-pip install tensorflow==2.2.0rc4
-pip install unityagents
-```
+Gamma: 0.99
 
-4. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
-    - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
-    - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
-    - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
-    - Windows (64-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86_64.zip)
-    
-    (_For Windows users_) Check out [this link](https://support.microsoft.com/en-us/help/827218/how-to-determine-whether-a-computer-is-running-a-32-bit-version-or-64) if you need help with determining if your computer is running a 32-bit version or 64-bit version of the Windows operating system.
+TAU: 2e -3
 
-    (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
+Learning Rate: 1e -3
 
+The model weights of the successful agent can be found in checkpoint.pth saved.
 
-5. Place the file in `navigation/`  and unzip (or decompress) the file. 
-
-### Instructions
-
-Follow the instructions in `Navigation.ipynb` to get started with training your own agent!  
+## Ideas for future work
+To improve the original Deep Q-Learning algorithm, combining Double DQN, Prioritized experience replay, Dueling DQN, Multi-Step Bootstrap Targets, Distributional DQN and Noisy DQN into one Rainbow agent was shown to outperform the individual algorithms.
