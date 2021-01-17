@@ -22,13 +22,31 @@ The task is episodic, and in order to solve the environment, your agent must get
 
 ### Getting Started
 
-1.  Set up your environment
+1. Create (and activate) a new environment with Python 3.6.  
+```bash
+python -m ipykernel install --user --name drlnd --display-name "drlnd"
+conda create --name drlnd python=3.6 
+activate drlnd
+```
+	
+    
+2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.
+	- Next, install the **classic control** environment group by following the instructions [here](https://github.com/openai/gym#classic-control).
+	- Then, install the **box2d** environment group by following the instructions [here](https://github.com/openai/gym#box2d).
+	```bash
+	pip install gym
+	```
+	
+    
+3. Install several dependencies
+```bash
+conda install Pillow matplotlib numpy jupyter pytest docopt pyyaml protobuf grpcio pandas scipy ipykernel
+conda install -y pytorch -c pytorch
+pip install tensorflow==2.2.0rc4
+pip install unityagents
+```
 
-    Please follow the instructions in the DRLND GitHub repository to set up your Python environment. These instructions can be found in README.md at the root of the repository. By following these instructions, you will install PyTorch, the ML-Agents toolkit, and a few more Python packages required to complete the project.
-
-    (For Windows users) The ML-Agents toolkit supports Windows 10. While it might be possible to run the ML-Agents toolkit using other versions of Windows, it has not been tested on other versions. Furthermore, the ML-Agents toolkit has not been tested on a Windows VM such as Bootcamp or Parallels.
-
-2. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
+4. Download the environment from one of the links below.  You need only select the environment that matches your operating system:
     - Linux: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux.zip)
     - Mac OSX: [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana.app.zip)
     - Windows (32-bit): [click here](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Windows_x86.zip)
@@ -38,7 +56,8 @@ The task is episodic, and in order to solve the environment, your agent must get
 
     (_For AWS_) If you'd like to train the agent on AWS (and have not [enabled a virtual screen](https://github.com/Unity-Technologies/ml-agents/blob/master/docs/Training-on-Amazon-Web-Service.md)), then please use [this link](https://s3-us-west-1.amazonaws.com/udacity-drlnd/P1/Banana/Banana_Linux_NoVis.zip) to obtain the environment.
 
-3. Place the file in the DRLND GitHub repository, in the `p1_navigation/` folder, and unzip (or decompress) the file. 
+
+5. Place the file in `navigation/`  and unzip (or decompress) the file. 
 
 ### Instructions
 
