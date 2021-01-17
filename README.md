@@ -1,8 +1,8 @@
 # Deep Reinforcement Learning Nanodegree
 
-### Getting Started - Dependencies
+### Getting Started 
 
-To set up your python environment to run the code in this repository, follow the instructions below.
+To set up your python environment, follow the instructions below.
 
 1. Create (and activate) a new environment with Python 3.6.  
 ```bash
