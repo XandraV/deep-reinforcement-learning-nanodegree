@@ -11,6 +11,11 @@ The agent is initialised in dqn_agent.py with state and action size. The goal is
 
 The neural network consists of three hidden layers and all three layers have a ReLU activation function. The network takes 37 states as inputs and outputs the action value function for every possible action in the corresponding state.
 
+### Training
+After resetting the environment the agent chooses an action, the next state, reward and done parameters are returned. The agent saves the observed experience in replay memory and takes the next step based on the information received. Once the agent has enough samples available in memory, it gets a random subset and starts to learn from that batch using gradient descent update step.
+
+The agent was expected to solve the environment under 1800 episodes and it was able to do so under 600 episodes. The received rewards after each episode can be seen below.
+
 ![rewards](rewards.png)
 
 ### Parameters used to achieve this result:
