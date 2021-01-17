@@ -31,17 +31,9 @@ To set up your python environment to run the code in this repository, follow the
 1. Create (and activate) a new environment with Python 3.6.  
 ```bash
 python -m ipykernel install --user --name drlnd --display-name "drlnd"
+conda create --name drlnd python=3.6 
+activate drlnd
 ```
-	- __Linux__ or __Mac__: 
-	```bash
-	conda create --name drlnd python=3.6
-	source activate drlnd
-	```
-	- __Windows__: 
-	```bash
-	conda create --name drlnd python=3.6 
-	activate drlnd
-	```
 	
     
 2. Follow the instructions in [this repository](https://github.com/openai/gym) to perform a minimal install of OpenAI gym.
