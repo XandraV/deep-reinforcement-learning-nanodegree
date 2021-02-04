@@ -1,6 +1,6 @@
 # 🚀 Deep Reinforcement Learning Nanodegree ![udacity](https://img.shields.io/badge/-Udacity-02B3E4?style=flat-square&logo=Udacity&logoColor=white)
 
-This [nanodegree program](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) by Udacity consits of 4 courses - **Foundations of Reinforcement Learning**, **Value-Based Methods**, **Policy-Based Methods**, **Multi-Agent Reinforcement Learning** -  to learn cutting-edge deep reinforcement learning algorithms from Deep Q-Networks (DQN) to Deep Deterministic Policy Gradients (DDPG) and apply these concepts to train agents to walk, drive, or perform other complex tasks.
+This [nanodegree program](https://www.udacity.com/course/deep-reinforcement-learning-nanodegree--nd893) by Udacity consists of 4 courses - **Foundations of Reinforcement Learning**, **Value-Based Methods**, **Policy-Based Methods**, **Multi-Agent Reinforcement Learning** -  to learn cutting-edge deep reinforcement learning algorithms from Deep Q-Networks (DQN) to Deep Deterministic Policy Gradients (DDPG) and apply these concepts to train agents to walk, drive, or perform other complex tasks.
 
 The 3 projects I completed as part of this nanodegree:
 - [Navigation Project](https://github.com/XandraV/deep-reinforcement-learning-nanodegree/tree/master/navigation) :octocat:
