@@ -8,6 +8,7 @@ The observation space consists of 8 variables corresponding to the position and 
 
 ### Implementation
 Agent and Multi-Agent Deep Deterministic Policy Gradient, Actor-Critic Method
+
 The agent is initialised with state size and action size in maddpg_agent.py. The neural networks architecture used by the agent can be found in model.py. The goal is to estimate the optimal policy that maximises the cumulative reward. In this case a Multi-Agent Deep Deterministic Policy Gradient algorithm is used as an approximate Actor-Critic method. Each agent uses 4 neural networks to solve the environment, a target and a local network for both Actor and Critic.
 
 The Actor neural network consists of three hidden layers with 100, 75 and 75 nodes respectively. All three layers have a ReLU activation function, the first one with batch normalization and the output layer is followed by a tanh function. The network takes a state as an input and outputs the best possible action in the corresponding state.
