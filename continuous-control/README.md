@@ -6,8 +6,9 @@ A reward of +0.1 is provided for each step that the agent's hand is in the goal 
 
 The observation space consists of 33 variables corresponding to position, rotation, velocity, and angular velocities of the arm. Each action is a vector with four numbers, corresponding to torque applicable to two joints.
 
-Implementation
+### Implementation
 Agent and Deep Deterministic Policy Gradient, Actor-Critic Method
+
 The agent is initialised with state size and action size in agent.py. The neural networks architecture used by the agent can be found in model.py. The goal is to estimate the optimal policy that maximises the cumulative reward. In this case a Deep Deterministic Policy Gradient algorithm is used as an approximate Actor-Critic method. The agent uses 4 neural networks to solve the environment, a target and a local network for both Actor and Critic.
 
 The Actor neural network consists of three hidden layers with 600, 400 and 200 nodes respectively. All three layers have a ReLU activation function and the output layer is followed by a tanh function. The network takes a state as an input and outputs the best possible action in the corresponding state.
